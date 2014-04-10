@@ -38,27 +38,27 @@ public class Sorting {
             for (int i = 0; i < split1.length; i++) {
                 int numb1 = Integer.parseInt(split1[i]);
                 int numb2 = Integer.parseInt(split2[i]);
-                if (numb1 > numb2) {
-                    return 1;
-                }
                 if (numb1 < numb2) {
                     return -1;
+                }
+                if (numb1 > numb2) {
+                    return 1;
                 }
             }
             //System.err.println("Error");
                 return 0;
             }
- 
+            
         for (int i = 0; i < split1.length; i++) {
             int numb1 = Integer.parseInt(split1[i]);
             int numb2 = Integer.parseInt(split2[i]);
  
-            if (numb1 > numb2) {
-                return 1;
-            }
- 
             if (numb1 < numb2) {
                 return -1;
+            }
+ 
+            if (numb1 > numb2) {
+                return 1;
             }
         }
  
@@ -66,6 +66,5 @@ public class Sorting {
     } catch (Exception ex) {
         return -1;
     }
-}
-     
-   }
+    }
+ }
