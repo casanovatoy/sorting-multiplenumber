@@ -30,7 +30,42 @@ public class Sorting {
    }
 
    private static int multiplePointCompare(String str1, String str2) {
-       return 0;
+       try {
+        String[] split1 = str1.split("\\.");
+        String[] split2 = str2.split("\\.");
+ 
+        if (split1.length != split2.length) {
+            for (int i = 0; i < split1.length; i++) {
+                int numb1 = Integer.parseInt(split1[i]);
+                int numb2 = Integer.parseInt(split2[i]);
+                if (numb1 > numb2) {
+                    return 1;
+                }
+                if (numb1 < numb2) {
+                    return -1;
+                }
+            }
+            //System.err.println("Error");
+                return 0;
+            }
+ 
+        for (int i = 0; i < split1.length; i++) {
+            int numb1 = Integer.parseInt(split1[i]);
+            int numb2 = Integer.parseInt(split2[i]);
+ 
+            if (numb1 > numb2) {
+                return 1;
+            }
+ 
+            if (numb1 < numb2) {
+                return -1;
+            }
+        }
+ 
+        return 0;
+    } catch (Exception ex) {
+        return -1;
+    }
+}
      
    }
-}
